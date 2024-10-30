@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+</head>
+<body>
+    <style>
+        *{
+            list-style: none;
+            text-decoration: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            margin: 50px;
+        }
+        h2{
+            text-decoration: underline;
+            padding: 16px 0px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+        }
+        li{
+            padding-top: 16px;
+            padding-right: 64px;
+            display: inline-block;
+        }
+        ul > li> a:nth-of-type(1){
+            margin-left: 50px;
+        }
+        .btn{
+            background-color: white;
+            padding: 4px 8px;
+            border: solid 1px black;
+            border-radius: 6px;
+            margin-right: 8px;
+        }
+        .btn-supprimer{
+            border: solid 2px red;
+            color: red;
+            transition: 0.2s;
+        }
+        .btn-supprimer:hover{
+            cursor: pointer;
+            color: white;
+            background-color: rgb(255, 55, 55);
+        }
+        .btn-valide{
+            border: solid 2px green;
+            color: green;
+            transition: 0.2s;
+        }
+        .btn-valide:hover{
+            background-color: lightgreen;
+        }
+        .btn-current{
+            border: solid 2px orange;
+            color: orange;
+            transition: 0.2s;
+        }
+        .btn-current:hover{
+            background-color: lightsalmon;
+        }
+        .btn-blue{
+            border: solid 2px blue;
+            color: blue;
+            transition: 0.2s;
+        }
+        .btn-blue:hover{
+            background-color: lightblue;
+        }
+    </style>
+    <h1>To Do List</h1>
+
+        <label for="addList">Ajouter une tâche :</label>
+        <input type="text" name="addList" id="inputTask" placeholder="Tâche à ajouter ...">
+        <button class="btn" id="btnAdd">Ajouter</button>
+        <p id="error"></p>
+
+    <ul id="current">
+        <h2>Tâches en cours :</h2>
+    </ul>
+    <ul id="ended">
+        <h2>Tâches termnées :</h2>
+    </ul>
+    <script src="script.js"></script>
+</body>
+</html>
