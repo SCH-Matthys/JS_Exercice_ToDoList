@@ -49,9 +49,17 @@ btnAdd.addEventListener("click", () =>{
 
         newBtnValide.addEventListener("click", () =>{
             newLi.removeChild(newBtnValide);
+            newLi.appendChild(newBtnCurrent);
             ul.removeChild(newLi);
             ul2.appendChild(newLi);
             newLi.appendChild(newBtnEdit);
+
+            const btnCurrent = document.getElementsByClassName("btn-current");
+            btnCurrent.addEventListener("click", () =>{
+                alert("test")
+                ul2.removeChild(newLi);
+                ul.appendChild(newLi);
+            })
         })
 
         newBtnSupprimer.addEventListener("click", () =>{
@@ -61,6 +69,8 @@ btnAdd.addEventListener("click", () =>{
             if(ul2.contains(newLi))
                 ul2.removeChild(newLi);
         })
+
+        
     }
     
 });
